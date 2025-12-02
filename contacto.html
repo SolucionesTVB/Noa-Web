@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Noa</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+<nav class="navbar">
+<div class="container">
+<div class="nav-brand"><a href="index.html">NOA</a></div>
+<div class="nav-menu">
+<a href="servicios.html">Servicios</a>
+<a href="tecnologia.html">Tecnología</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="contacto.html" class="btn-nav active">Contacto</a>
+</div>
+</div>
+</nav>
+<section class="page-header">
+<div class="container">
+<h1>Conversemos</h1>
+<p>¿Listo para automatizar tu operación? Agenda una demo gratuita</p>
+</div>
+</section>
+<section class="contact-section">
+<div class="container">
+<div class="contact-grid">
+<div class="contact-info">
+<h2>Formas de Contacto</h2>
+<div class="contact-item">
+<span class="contact-icon">📱</span>
+<div>
+<h3>WhatsApp</h3>
+<p>La forma más rápida. Respuesta en minutos.</p>
+<a href="https://wa.me/50660457989" target="_blank" class="btn-primary">Enviar WhatsApp</a>
+</div>
+</div>
+<div class="contact-item">
+<span class="contact-icon">📞</span>
+<div>
+<h3>Teléfono</h3>
+<p>+506 8967-2842</p>
+<p class="small">Lunes a viernes, 8am - 6pm</p>
+</div>
+</div>
+<div class="contact-item">
+<span class="contact-icon">✉️</span>
+<div>
+<h3>Email</h3>
+<p>tv@noacr.net</p>
+<p class="small">Para consultas detalladas</p>
+</div>
+</div>
+<div class="contact-item">
+<span class="contact-icon">🔗</span>
+<div>
+<h3>LinkedIn</h3>
+<a href="https://www.linkedin.com/in/tonyvillalobosbarrantes" target="_blank">Tony Villalobos Barrantes</a>
+</div>
+</div>
+<div class="contact-item">
+<span class="contact-icon">📍</span>
+<div>
+<h3>Ubicación</h3>
+<p>Costa Rica 🇨🇷</p>
+<p class="small">Operamos 100% remoto</p>
+</div>
+</div>
+</div>
+<div class="contact-form-container">
+<h2>Agenda una Demo Gratuita</h2>
+<form id="contactForm" class="contact-form">
+<div class="form-group">
+<label>Nombre completo *</label>
+<input type="text" name="nombre" required>
+</div>
+<div class="form-group">
+<label>Email *</label>
+<input type="email" name="email" required>
+</div>
+<div class="form-group">
+<label>Teléfono *</label>
+<input type="tel" name="telefono" required>
+</div>
+<div class="form-group">
+<label>Empresa</label>
+<input type="text" name="empresa">
+</div>
+<div class="form-group">
+<label>¿Qué solución te interesa? *</label>
+<select name="solucion" required>
+<option value="">Selecciona una opción</option>
+<option value="Noa Cobros">Noa Cobros</option>
+<option value="Asistente Virtual">Asistente Virtual</option>
+<option value="Comparador">Comparador de Pólizas</option>
+<option value="Todas">Todas las soluciones</option>
+<option value="No estoy seguro">No estoy seguro</option>
+</select>
+</div>
+<div class="form-group">
+<label>Cuéntanos sobre tu necesidad *</label>
+<textarea name="mensaje" rows="5" required></textarea>
+</div>
+<button type="submit" class="btn-primary-large">Solicitar Demo</button>
+<p id="formStatus" class="form-status"></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="faq-section">
+<div class="container">
+<h2>Preguntas Frecuentes</h2>
+<div class="faq-grid">
+<div class="faq-item">
+<h3>¿Cuánto tarda la implementación?</h3>
+<p>Entre 2 y 4 semanas dependiendo de la solución y complejidad de tu operación.</p>
+</div>
+<div class="faq-item">
+<h3>¿Necesito conocimientos técnicos?</h3>
+<p>No. Nuestras aplicaciones están diseñadas para ser simples de usar. Incluimos capacitación completa.</p>
+</div>
+<div class="faq-item">
+<h3>¿Cuál es el costo?</h3>
+<p>Depende de la solución y tamaño de tu operación. Agenda una demo para cotización personalizada.</p>
+</div>
+<div class="faq-item">
+<h3>¿Ofrecen soporte?</h3>
+<p>Sí, soporte continuo vía WhatsApp, email y llamadas durante horario laboral.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div><h4>NOA</h4><p>Insurtech & IA</p></div>
+<div><h4>Soluciones</h4><a href="servicios.html">Ver todas</a></div>
+<div><h4>Empresa</h4><a href="nosotros.html">Nosotros</a></div>
+<div><h4>Contacto</h4><a href="https://wa.me/50660457989">WhatsApp</a></div>
+</div>
+<p>© 2025 Noa - Costa Rica 🇨🇷</p>
+</div>
+</footer>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    const status = document.getElementById('formStatus');
+    
+    // Enviar a WhatsApp
+    const mensaje = `Solicitud de Demo
+Nombre: ${data.nombre}
+Email: ${data.email}
+Teléfono: ${data.telefono}
+Empresa: ${data.empresa}
+Solución: ${data.solucion}
+Mensaje: ${data.mensaje}`;
+    
+    const whatsappUrl = `https://wa.me/50660457989?text=${encodeURIComponent(mensaje)}`;
+    
+    status.textContent = '✅ Redirigiendo a WhatsApp...';
+    status.style.color = 'green';
+    
+    setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        this.reset();
+        status.textContent = '¡Gracias! Te contactaremos pronto.';
+    }, 1000);
+});
+</script>
+</body>
+</html>
