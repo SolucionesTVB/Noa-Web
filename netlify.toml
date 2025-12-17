@@ -1,2 +1,8 @@
 [build]
   publish = "."
+
+# Evitar 404 en refresh (SPA-safe, no molesta si es HTML simple)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
