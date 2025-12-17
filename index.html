@@ -1,790 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NOA – Productividad inteligente para seguros</title>
-  <meta name="description" content="NOA es una plataforma costarricense de productividad inteligente para el sector asegurador. IA, cobros automáticos, asistente virtual y comparador inteligente para corredores, talleres y empresas.">
+  <meta name="description" content="NOA estandariza y automatiza tareas repetitivas en operaciones de seguros: atención, seguimiento, cobros y renovaciones, con trazabilidad y control.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --blue-main: #0A3A81;
-      --blue-accent: #3FB8FF;
-      --white: #FFFFFF;
-      --grey-bg: #F5F8FC;
-      --grey-text: #505A64;
-      --black-soft: #0B0D0F;
-      --radius: 16px;
-      --shadow-soft: 0 18px 45px rgba(11, 13, 15, 0.10);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--black-soft);
-      background-color: var(--grey-bg);
-      line-height: 1.5;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .page {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 32px 24px 64px; background-color: var(--white); border-radius: 24px; box-shadow: 0 24px 80px rgba(15,23,42,0.06);
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 32px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 20% 0, #2E8AFF, #0052CC);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-weight: 800;
-      font-size: 22px;
-      box-shadow: 0 10px 30px rgba(0, 82, 204, 0.5);
-    }
-
-    .logo-text-main {
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .logo-text-sub {
-      font-size: 11px;
-      color: var(--grey-text);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 14px;
-      color: var(--grey-text);
-    }
-
-    nav a:hover {
-      color: var(--blue-main);
-    }
-
-    .nav-cta {
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(0, 82, 204, 0.16);
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 56px;
-    }
-
-    .hero-eyebrow {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--blue-main);
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .hero-title {
-      font-size: 56px;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 26px;
-      font-weight: 700;
-    }
-
-    .hero-title span {
-      color: var(--blue-main);
-    }
-
-    .hero-subtitle {
-      font-size: 20px;
-      color: var(--grey-text);
-      margin-bottom: 20px;
-    }
-
-    .hero-tagline {
-      font-size: 14px;
-      color: var(--grey-text);
-      margin-bottom: 28px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .hero-tagline-pill {
-      background-color: var(--grey-bg);
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--blue-main);
-      font-weight: 600;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .btn-primary {
-      background-color: var(--blue-main);
-      color: var(--white);
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      box-shadow: var(--shadow-soft);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary:hover {
-      background-color: #003F99;
-    }
-
-    .btn-secondary {
-      background-color: var(--grey-bg);
-      color: var(--blue-main);
-      padding: 11px 20px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 500;
-      border: 1px solid rgba(0, 82, 204, 0.3);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .btn-secondary:hover {
-      background-color: var(--grey-bg);
-    }
-
-    .hero-footnote {
-      font-size: 12px;
-      color: var(--grey-text);
-    }
-
-    .hero-visual {
-      background: radial-gradient(circle at 0 0, #2E8AFF 0%, #0052CC 38%, #0B0D0F 100%);
-      border-radius: 24px;
-      padding: 20px;
-      color: var(--white);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-visual-title {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      opacity: 0.85;
-      margin-bottom: 6px;
-    }
-
-    .hero-visual-main {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 26px;
-    }
-
-    .hero-visual-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .metric-card {
-      background-color: rgba(11, 13, 15, 0.45);
-      border-radius: 14px;
-      padding: 10px 12px;
-      font-size: 11px;
-    }
-
-    .metric-label {
-      opacity: 0.8;
-      margin-bottom: 4px;
-    }
-
-    .metric-value {
-      font-size: 17px;
-      font-weight: 600;
-    }
-
-    .hero-visual-footer {
-      font-size: 11px;
-      opacity: 0.8;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .pill {
-      font-size: 11px;
-      border-radius: 999px;
-      padding: 4px 10px;
-      background-color: rgba(244, 246, 248, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    section {
-      margin-bottom: 48px;
-    }
-
-    .section-eyebrow {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--blue-main);
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    .section-title {
-      font-size: 26px;
-      margin-bottom: 26px;
-      letter-spacing: -0.02em;
-    }
-
-    .section-description {
-      font-size: 15px;
-      color: var(--grey-text);
-      max-width: 640px;
-      margin-bottom: 20px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background-color: var(--grey-bg);
-      border-radius: var(--radius);
-      padding: 18px 18px 18px;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
-      border: 1px solid rgba(148, 163, 184, 0.25);
-    }
-
-    .card-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--blue-main);
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .card-body {
-      font-size: 14px;
-      color: var(--grey-text);
-      margin-bottom: 10px;
-    }
-
-    .card-list {
-      font-size: 13px;
-      color: var(--grey-text);
-      padding-left: 16px;
-    }
-
-    .card-list li {
-      margin-bottom: 4px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .highlight-box {
-      background-color: var(--grey-bg);
-      border-radius: var(--radius);
-      padding: 18px 18px 16px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    .highlight-text {
-      font-size: 14px;
-      color: var(--grey-text);
-      margin-bottom: 12px;
-    }
-
-    .highlight-tagline {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--blue-main);
-    }
-
-    .cases-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .case-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .case-before, .case-after {
-      font-size: 13px;
-      color: var(--grey-text);
-      margin-bottom: 4px;
-    }
-
-    .case-after strong {
-      color: var(--blue-main);
-    }
-
-    .cta-section {
-      background-color: var(--black-soft);
-      color: var(--white);
-      border-radius: 24px;
-      padding: 26px 24px 24px;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 16px;
-      align-items: center;
-      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.5);
-    }
-
-    .cta-title {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .cta-text {
-      font-size: 14px;
-      opacity: 0.9;
-      margin-bottom: 14px;
-    }
-
-    .cta-badges {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      opacity: 0.7;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-end;
-    }
-
-    .cta-actions .btn-primary {
-      box-shadow: 0 16px 40px rgba(0, 82, 204, 0.7);
-    }
-
-    footer {
-      margin-top: 32px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 12px;
-      color: var(--grey-text);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    footer a {
-      font-weight: 500;
-      color: var(--blue-main);
-      font-size: 12px;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        order: -1;
-      }
-
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .cases-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-section {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .hero-title {
-        font-size: 32px;
-      }
-    }
-  </style>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H2DPVN5X6R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-H2DPVN5X6R");
-  </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2K3GN2WTT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-X2K3GN2WTT");
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="logo">
-        <div class="logo-icon">N</div>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
         <div>
-          <div class="logo-text-main">NOA</div>
-          <div class="logo-text-sub">Productividad inteligente</div>
+          <h1>NOA</h1>
+          <p>Productividad inteligente para seguros</p>
         </div>
       </div>
-      <nav>
-        <a href="#sobre">Sobre NOA</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#tecnologia">Tecnología</a>
-        <a href="#casos">Casos</a>
-        <a href="#contacto" class="nav-cta">Solicitar demo</a>
+
+      <nav class="navlinks" aria-label="Navegación">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="nosotros.html">Sobre NOA</a>
+        <a href="contacto.html">Contacto</a>
       </nav>
-    </header>
 
-    <main>
-      <section class="hero" id="inicio">
-        <div>
-          <div class="hero-eyebrow">Insurtech · Costa Rica</div>
-          <h1 class="hero-title">
-            Productividad inteligente para el sector <span>asegurador</span> en Costa Rica.
-          </h1>
-          <p class="hero-subtitle">
-            Automatizamos, ordenamos y potenciamos el trabajo diario de corredores, talleres y empresas con IA aplicada al mercado costarricense.
+      <a class="btn" href="https://wa.me/50660457989?text=Hola%20NOA%2C%20quiero%20una%20demo%20y%20una%20propuesta." target="_blank" rel="noopener">Pedir demo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card pad">
+          <span class="kicker"><span class="kdot"></span> Operación B2B · Costa Rica</span>
+          <h2 class="h-title">Eficiencia operativa para seguros.</h2>
+          <p class="h-sub">
+            NOA automatiza seguimiento, cobros y tareas repetitivas con trazabilidad.
+            Para que tu equipo opere con orden y responda más rápido.
           </p>
-          <div class="hero-tagline">
-            <span class="hero-tagline-pill">Menos rutina · Más acción</span>
-            <span>Más foco en clientes, menos desgaste operativo.</span>
-          </div>
+
           <div class="hero-actions">
-            <button class="btn-primary" onclick="window.location.href='#contacto'">
-              Solicitar demo gratuita
-            </button>
-            <button class="btn-secondary" onclick="window.location.href='https://wa.me/50660457989?text=Quiero%20información%20de%20NOA%20IA'">
-              Hablar por WhatsApp
-            </button>
+            <a class="btn ghost" href="servicios.html">Ver servicios</a>
+            <a class="btn" href="https://wa.me/50660457989?text=Hola%20NOA%2C%20quiero%20una%20demo%20y%20definir%20un%20MVP." target="_blank" rel="noopener">Agendar por WhatsApp</a>
           </div>
-          <div class="hero-footnote">
-            Plataforma 100% costarricense · Ideal para corredores, talleres y empresas.
-          </div>
+
+          <div class="sp-16"></div>
+          <p class="small"><b>No somos un software, somos productividad inteligente.</b></p>
         </div>
 
-        <aside class="hero-visual">
-          <div class="hero-visual-title">Panel IA · NOA</div>
-          <div class="hero-visual-main">
-            Operación aseguradora bajo control, 24/7.
-          </div>
-          <div class="hero-visual-metrics">
-            <div class="metric-card">
-              <div class="metric-label">Tiempo operativo</div>
-              <div class="metric-value">– 80%</div>
-              <div style="font-size:10px;opacity:0.8;">Tareas repetitivas automatizadas.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-label">Seguimiento de cobros</div>
-              <div class="metric-value">+ 28%</div>
-              <div style="font-size:10px;opacity:0.8;">Mejora en recuperación (casos demo).</div>
+        <div class="mini">
+          <div class="row">
+            <div class="badge">✓</div>
+            <div>
+              <h4>Menos fricción</h4>
+              <p>Reduce reprocesos y “pendientes” por olvido o falta de seguimiento.</p>
             </div>
           </div>
-          <div class="hero-visual-footer">
-            IA, flujos automatizados y WhatsApp integrado en una sola plataforma.
-          </div>
-          <div class="pill-row">
-            <div class="pill">Asistente virtual 24/7</div>
-            <div class="pill">Cobros automáticos</div>
-            <div class="pill">Comparador inteligente</div>
-            <div class="pill">Renovaciones anticipadas</div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="sobre">
-        <div class="section-eyebrow">Sobre NOA</div>
-        <h2 class="section-title">La plataforma costarricense para digitalizar tu operación aseguradora.</h2>
-        <p class="section-description">
-          NOA es una plataforma desarrollada en Costa Rica para digitalizar y optimizar la gestión de seguros.
-          Combinamos IA, automatización y diseño operativo inteligente para que corredores y empresas trabajen con
-          precisión, rapidez y control total. No somos un software. <strong>Somos productividad inteligente.</strong>
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-label">Enfoque</div>
-            <div class="card-title">Diseñado para el día a día real</div>
-            <p class="card-body">
-              Menos clics, menos planillas, menos improvisación. Más estructura, control y cliente al centro.
-            </p>
-          </div>
-          <div class="card">
-            <div class="card-label">Mercado</div>
-            <div class="card-title">100% alineado a Costa Rica</div>
-            <p class="card-body">
-              Pensado para corredores, talleres y empresas que operan bajo normativa local y buscan eficiencia real.
-            </p>
-          </div>
-          <div class="card">
-            <div class="card-label">Acompañamiento</div>
-            <div class="card-title">Implementación guiada</div>
-            <p class="card-body">
-              Te acompañamos en la configuración inicial, flujos clave y puesta en marcha para que veas resultados rápido.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="servicios">
-        <div class="section-eyebrow">Servicios</div>
-        <h2 class="section-title">Módulos que trabajan por vos mientras atendés a tus clientes.</h2>
-        <p class="section-description">
-          NOA integra en una sola plataforma tu asistente virtual, cobros automáticos, comparador inteligente y motor de
-          renovaciones. Menos sistemas sueltos, más productividad integrada.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-label">IA · Atención</div>
-            <div class="card-title">Asistente virtual 24/7</div>
-            <p class="card-body">
-              Atención automática con IA, historial centralizado y respuestas inteligentes a las consultas frecuentes de tus clientes.
-            </p>
-            <ul class="card-list">
-              <li>Disponible todo el día.</li>
-              <li>Respuestas claras y consistentes.</li>
-              <li>Historial de conversaciones por cliente.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="card-label">Cobros</div>
-            <div class="card-title">Cobros automáticos y seguimiento</div>
-            <p class="card-body">
-              Recordatorios personalizados, enlaces de pago y reportes ejecutivos para dirección o contabilidad.
-            </p>
-            <ul class="card-list">
-              <li>Recordatorios antes y después de vencimiento.</li>
-              <li>Segmentación de morosidad.</li>
-              <li>Visión global de cartera pendiente.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="card-label">Comercial</div>
-            <div class="card-title">Comparador inteligente</div>
-            <p class="card-body">
-              Organiza pólizas, facilita el análisis y minimiza errores al presentar opciones a tus clientes.
-            </p>
-            <ul class="card-list">
-              <li>Comparaciones claras y entendibles.</li>
-              <li>Menos riesgo de equivocación en datos.</li>
-              <li>Soporte ideal para ventas consultivas.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div style="margin-top:20px;" class="grid-2">
-          <div class="highlight-box">
-            <div class="card-label">Renovaciones</div>
-            <div class="card-title" style="margin-bottom:8px;">Motor IA para renovaciones</div>
-            <p class="highlight-text">
-              Predice vencimientos, identifica riesgos y automatiza alertas críticas para evitar sorpresas y mantener la relación con el cliente siempre al día.
-            </p>
-            <div class="highlight-tagline">Cero vencimientos “sorpresa”.</div>
-          </div>
-          <div class="highlight-box">
-            <div class="card-label">Operación</div>
-            <div class="card-title" style="margin-bottom:8px;">Operación centralizada</div>
-            <p class="highlight-text">
-              Historial unificado del cliente, documentos organizados y flujos que conectan atención, cobros y seguimiento.
-            </p>
-            <div class="highlight-tagline">Porque la información dispersa cuesta dinero.</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="tecnologia">
-        <div class="section-eyebrow">Tecnología</div>
-        <h2 class="section-title">Infraestructura moderna para un negocio que no se puede detener.</h2>
-        <p class="section-description">
-          Construido sobre infraestructura de clase mundial: Supabase, Netlify, GitHub y Wasender API.
-          Cumplimos prácticas modernas de seguridad, roles y privacidad, con foco en el sector asegurador.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-label">Backend</div>
-            <div class="card-title">Supabase</div>
-            <p class="card-body">
-              Bases seguras, autenticación, triggers y APIs para que tu información crítica esté protegida y disponible.
-            </p>
-          </div>
-          <div class="card">
-            <div class="card-label">Hosting</div>
-            <div class="card-title">Netlify</div>
-            <p class="card-body">
-              Hosting corporativo, despliegues inmediatos y alta disponibilidad para que tu operación no se detenga.
-            </p>
-          </div>
-          <div class="card">
-            <div class="card-label">Conectividad</div>
-            <div class="card-title">WhatsApp & canales</div>
-            <p class="card-body">
-              Integración con Wasender API y otros canales para un contacto directo, claro y medible con tus clientes.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="casos">
-        <div class="section-eyebrow">Casos demostrativos</div>
-        <h2 class="section-title">Resultados visibles cuando la operación se alinea con la IA.</h2>
-        <p class="section-description">
-          Estos son escenarios demostrativos basados en operaciones típicas del mercado asegurador. El objetivo es
-          mostrar el tipo de impacto que podés obtener al ordenar procesos y automatizar tareas clave.
-        </p>
-
-        <div class="cases-grid">
-          <div class="card">
-            <div class="case-title">Correduría empresarial</div>
-            <p class="case-before"><strong>Antes:</strong> 10 horas semanales en seguimiento y cobros.</p>
-            <p class="case-after"><strong>Después con NOA:</strong> 1.5 horas y hasta 28% menos morosidad en 60 días (escenario demo).</p>
-          </div>
-          <div class="card">
-            <div class="case-title">Taller automotriz</div>
-            <p class="case-before"><strong>Antes:</strong> WhatsApp desordenado, clientes sin respuesta clara.</p>
-            <p class="case-after"><strong>Después con NOA:</strong> 98% de mensajes automatizados + encuestas post-servicio (escenario demo).</p>
-          </div>
-          <div class="card">
-            <div class="case-title">Pyme asegurada</div>
-            <p class="case-before"><strong>Antes:</strong> Confusión en pólizas y vencimientos.</p>
-            <p class="case-after"><strong>Después con NOA:</strong> Renovaciones anticipadas y cero vencimientos ocultos (escenario demo).</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto" class="cta-wrapper">
-        <div class="cta-section">
-          <div>
-            <div class="section-eyebrow" style="color:#60A5FA;">Demo · NOA</div>
-            <h2 class="cta-title">Lleve su operación aseguradora a otro nivel.</h2>
-            <p class="cta-text">
-              Solicite una demo y vea en vivo cómo NOA reduce carga operativa, ordena la información crítica y le devuelve tiempo para lo que realmente importa: sus clientes.
-            </p>
-            <div class="cta-badges">
-              Plataforma costarricense · IA aplicada · Enfoque B2B
+          <div class="row">
+            <div class="badge">✓</div>
+            <div>
+              <h4>Más control</h4>
+              <p>Estados claros, tareas visibles y trazabilidad del trabajo.</p>
             </div>
           </div>
-          <div class="cta-actions">
-            <button class="btn-primary" onclick="window.location.href='mailto:tv@noacr.net?subject=Demo%20NOA&body=Quiero%20coordinar%20una%20demo%20de%20NOA.'">
-              Solicitar demo por correo
-            </button>
-            <button class="btn-secondary" onclick="window.location.href='https://wa.me/50660457989?text=Quiero%20agendar%20una%20demo%20de%20NOA'">
-              Agendar demo por WhatsApp
-            </button>
+          <div class="row">
+            <div class="badge">✓</div>
+            <div>
+              <h4>Mejor servicio</h4>
+              <p>Respuestas consistentes y tiempos de atención más rápidos.</p>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top:14px;">
+            <h3>Contacto directo</h3>
+            <p>Correo: <a href="mailto:tv@noacr.net">tv@noacr.net</a><br/>WhatsApp: <a href="https://wa.me/50660457989" target="_blank" rel="noopener">+506 6045 7989</a></p>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <span>© <span id="year"></span> NOA · Productividad inteligente para seguros.</span>
-      <span>
-        <a href="#inicio">Volver arriba</a>
-      </span>
-    </footer>
-  </div>
+  <footer class="footer">
+    <div class="container inner">
+      <div class="small">© <span id="y"></span> NOA · Costa Rica</div>
+      <div class="small">
+        <a href="servicios.html">Servicios</a> · <a href="tecnologia.html">Tecnología</a> · <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
