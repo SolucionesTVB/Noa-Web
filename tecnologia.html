@@ -1,91 +1,324 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Tecnología | NOA</title>
-  <meta name="description" content="Cómo funciona NOA: automatización, trazabilidad y flujos de trabajo para operación de seguros." />
+
+  <meta
+    name="description"
+    content="Tecnología NOA: inteligencia artificial, automatización e integración aplicadas a procesos reales del negocio de seguros."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="index.html">
-          <div class="logo" aria-hidden="true"></div>
-          <div class="brandText">
-            <div class="name">NOA</div>
-            <div class="tag">Productividad inteligente para seguros</div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="NOA Inicio">
+        <span class="brand-mark">N</span>
+
+        <span class="brand-copy">
+          <strong>NOA</strong>
+          <small>IA aplicada al negocio de seguros</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a class="active" href="tecnologia.html">Tecnología</a>
+        <a href="nosotros.html">Sobre NOA</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <a
+        class="button button-small button-primary"
+        href="https://wa.me/50660457989?text=Hola%2C%20quiero%20conocer%20las%20soluciones%20de%20NOA."
+        target="_blank"
+        rel="noopener"
+      >
+        Conversemos
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="technology-hero">
+      <div class="container technology-hero-layout">
+        <div>
+          <span class="section-kicker section-kicker-light">
+            Tecnología NOA
+          </span>
+
+          <h1>
+            La tecnología trabaja detrás.
+            <em>El asesor sigue al frente.</em>
+          </h1>
+
+          <p>
+            Aplicamos inteligencia artificial, automatización e integración a
+            procesos reales del negocio de seguros. El objetivo no es agregar
+            complejidad, sino reducir carga operativa y mejorar la gestión.
+          </p>
+        </div>
+
+        <div class="technology-system">
+          <div class="technology-system-top">
+            <span>Arquitectura aplicada</span>
+            <strong>Proceso → Inteligencia → Acción</strong>
           </div>
-        </a>
-        <nav class="navlinks">
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="tecnologia.html">Tecnología</a>
-          <a href="nosotros.html">Sobre NOA</a>
-          <a href="contacto.html">Contacto</a>
-        </nav>
-        <div class="actions">
-          <a class="btn primary" href="https://wa.me/50660457989?text=Hola%2C%20quiero%20una%20demo%20de%20NOA." target="_blank" rel="noopener">Pedir demo</a>
+
+          <div class="technology-flow">
+            <div>
+              <span>01</span>
+              <strong>Información</strong>
+            </div>
+
+            <i>→</i>
+
+            <div>
+              <span>02</span>
+              <strong>Análisis</strong>
+            </div>
+
+            <i>→</i>
+
+            <div>
+              <span>03</span>
+              <strong>Seguimiento</strong>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <main class="container page">
-    <div class="pageHeader">
-      <h1>Tecnología</h1>
-      <p>En sencillo: NOA convierte tareas repetitivas en un flujo con control y registro. Menos "a mano", más orden.</p>
-    </div>
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Cómo funciona</span>
 
-    <div class="list">
-      <div class="listItem">
-        <b>Automatización</b>
-        <span>Dispara recordatorios y seguimientos según reglas básicas (quién, qué, cuándo).</span>
-      </div>
-      <div class="listItem">
-        <b>Trazabilidad</b>
-        <span>Queda registro de lo que se hizo y cuándo. Esto evita discusiones internas y pérdidas de tiempo.</span>
-      </div>
-      <div class="listItem">
-        <b>Integración por canales</b>
-        <span>WhatsApp y web como canales principales para atención, confirmaciones y solicitud de información.</span>
-      </div>
-      <div class="listItem">
-        <b>Tablero de control</b>
-        <span>Una vista clara para dirección: lo urgente, lo pendiente y lo resuelto.</span>
-      </div>
-    </div>
+            <h2>
+              Tecnología útil, integrada al trabajo cotidiano.
+            </h2>
+          </div>
 
-    <div class="card" style="margin-top:14px">
-      <h4>¿Querés ver el flujo aplicado a tu caso?</h4>
-      <p>Te lo mostramos con un ejemplo real: seguimiento, cobro y atención en un mismo hilo.</p>
-      <div class="pillRow" style="margin-top:12px">
-        <a class="btn primary" href="https://wa.me/50660457989?text=Hola%2C%20quiero%20ver%20el%20flujo%20de%20NOA%20aplicado%20a%20mi%20caso." target="_blank" rel="noopener">Solicitar demo</a>
-        <a class="btn" href="servicios.html">Ver servicios</a>
-      </div>
-    </div>
+          <p>
+            Cada componente cumple una función específica. Juntos permiten que la
+            operación sea más clara, medible y consistente.
+          </p>
+        </div>
 
-    <footer class="footer">
-      <div class="footerRow">
-        <div>© <span id="y"></span> NOA · Costa Rica</div>
-        <div class="smallLinks">
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="contacto.html">Contacto</a>
+        <div class="technology-grid">
+          <article class="technology-card">
+            <span class="technology-number">01</span>
+
+            <div class="technology-icon">◎</div>
+
+            <h3>Automatización inteligente</h3>
+
+            <p>
+              Ejecuta recordatorios, controles y acciones según reglas definidas,
+              sin depender de que alguien recuerde cada pendiente.
+            </p>
+
+            <ul>
+              <li>Alertas y vencimientos</li>
+              <li>Seguimientos programados</li>
+              <li>Reducción de tareas repetitivas</li>
+            </ul>
+          </article>
+
+          <article class="technology-card technology-card-featured">
+            <span class="technology-number">02</span>
+
+            <div class="technology-icon">✦</div>
+
+            <h3>Modelos de IA aplicados</h3>
+
+            <p>
+              Analizan información, identifican prioridades y apoyan decisiones
+              comerciales y operativas con mayor claridad.
+            </p>
+
+            <ul>
+              <li>Clasificación de oportunidades</li>
+              <li>Priorización de acciones</li>
+              <li>Generación de recomendaciones</li>
+            </ul>
+          </article>
+
+          <article class="technology-card">
+            <span class="technology-number">03</span>
+
+            <div class="technology-icon">↗</div>
+
+            <h3>Integración de canales</h3>
+
+            <p>
+              Conecta formularios, web, WhatsApp y sistemas de seguimiento para
+              que la información no quede dispersa.
+            </p>
+
+            <ul>
+              <li>Captura de información</li>
+              <li>Comunicación centralizada</li>
+              <li>Continuidad entre canales</li>
+            </ul>
+          </article>
+
+          <article class="technology-card">
+            <span class="technology-number">04</span>
+
+            <div class="technology-icon">□</div>
+
+            <h3>Trazabilidad operativa</h3>
+
+            <p>
+              Registra acciones, estados y resultados para que el asesor tenga una
+              visión clara de lo pendiente y lo resuelto.
+            </p>
+
+            <ul>
+              <li>Historial de acciones</li>
+              <li>Estados visibles</li>
+              <li>Control del proceso</li>
+            </ul>
+          </article>
         </div>
       </div>
-    </footer>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container technology-principle-layout">
+        <div>
+          <span class="section-kicker section-kicker-light">
+            Principio de diseño
+          </span>
+
+          <h2>
+            La mejor tecnología es la que simplifica el trabajo.
+          </h2>
+
+          <p>
+            NOA evita soluciones recargadas y procesos difíciles de adoptar.
+            Diseñamos herramientas claras, enfocadas y alineadas con la forma real
+            en que trabajan los asesores y corredores de seguros.
+          </p>
+        </div>
+
+        <div class="technology-principles">
+          <article>
+            <span>01</span>
+            <strong>Simple de utilizar</strong>
+            <p>La operación debe entenderse sin manuales interminables.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <strong>Adaptada al proceso</strong>
+            <p>La herramienta se ajusta al negocio, no al revés.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <strong>Con información segura</strong>
+            <p>Accesos, trazabilidad y manejo responsable de los datos.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <strong>Preparada para crecer</strong>
+            <p>La solución puede evolucionar conforme cambia la operación.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <span class="section-kicker">Aplicación real</span>
+
+            <h2>Veamos qué tecnología sí aporta valor a su operación.</h2>
+
+            <p>
+              No todo necesita inteligencia artificial. Primero identificamos el
+              problema y después definimos la herramienta correcta.
+            </p>
+          </div>
+
+          <a
+            class="button button-primary button-large"
+            href="https://wa.me/50660457989?text=Hola%2C%20quiero%20evaluar%20una%20soluci%C3%B3n%20tecnol%C3%B3gica%20para%20mi%20operaci%C3%B3n%20de%20seguros."
+            target="_blank"
+            rel="noopener"
+          >
+            Evaluar mi proceso
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2K3GN2WTT"></script>
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div>
+        <div class="footer-brand">NOA</div>
+
+        <p>
+          Crecimiento profesional y personal para asesores de seguros.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="nosotros.html">Sobre NOA</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-contact">
+        <span>Costa Rica</span>
+        <a href="https://wa.me/50660457989">+506 6045 7989</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> NOA</span>
+      <span>Inteligencia aplicada al negocio de seguros.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-X2K3GN2WTT"
+  ></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-X2K3GN2WTT');
   </script>
