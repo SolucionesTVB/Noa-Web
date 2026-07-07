@@ -1752,3 +1752,214 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.about-hero {
+  padding: 88px 0 80px;
+  background:
+    radial-gradient(
+      circle at 82% 20%,
+      rgba(85, 200, 245, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(145deg, var(--navy-950), var(--navy-900));
+}
+
+.about-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.62fr);
+  gap: 85px;
+  align-items: end;
+}
+
+.about-hero h1 {
+  max-width: 850px;
+  margin: 22px 0 24px;
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(46px, 5.4vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.about-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-manifesto {
+  padding: 32px;
+  border: 1px solid rgba(140, 221, 250, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.about-manifesto span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--cyan-300);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-manifesto blockquote {
+  margin: 0;
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+.about-story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 100px;
+}
+
+.about-story-layout h2 {
+  margin: 18px 0 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(38px, 4.8vw, 57px);
+  line-height: 1.07;
+  letter-spacing: -0.045em;
+}
+
+.about-story-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.about-story-copy p + p {
+  margin-top: 22px;
+}
+
+.about-principles-section {
+  border-top: 1px solid var(--line);
+  background: var(--white);
+}
+
+.about-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 56px;
+}
+
+.about-principles-grid article {
+  min-height: 280px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--ice-50);
+}
+
+.about-principles-grid span {
+  display: block;
+  margin-bottom: 38px;
+  color: var(--blue-500);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.about-principles-grid h3 {
+  margin: 0 0 15px;
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+}
+
+.about-principles-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.about-vision-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.about-vision-layout h2 {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.about-vision-layout > div:first-child p {
+  max-width: 700px;
+  margin: 26px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.about-vision-card {
+  padding: 42px;
+  border: 1px solid rgba(140, 221, 250, 0.18);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.08),
+      rgba(255,255,255,.025)
+    );
+}
+
+.about-vision-label {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--cyan-300);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.about-vision-card strong {
+  display: block;
+  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+.about-vision-card p {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+@media (max-width: 920px) {
+  .about-hero-layout,
+  .about-story-layout,
+  .about-vision-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: 68px 0 64px;
+  }
+
+  .about-hero h1 {
+    font-size: 40px;
+  }
+
+  .about-principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
