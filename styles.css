@@ -1357,3 +1357,106 @@ a {
     font-size: 39px;
   }
 }
+
+/* Ajuste final del hero — Home */
+.hero {
+  padding-top: 78px;
+  padding-bottom: 68px;
+}
+
+.hero-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(410px, 0.82fr);
+  gap: 58px;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin-top: 22px;
+  margin-bottom: 21px;
+  font-size: clamp(45px, 5.1vw, 66px);
+  line-height: 1.01;
+}
+
+.hero-text {
+  max-width: 650px;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.hero-actions {
+  margin-top: 29px;
+}
+
+.hero-proof {
+  max-width: 640px;
+  margin-top: 36px;
+  padding-top: 22px;
+}
+
+.visual-shell {
+  padding: 23px;
+  border-radius: 27px;
+}
+
+.visual-top {
+  margin-bottom: 19px;
+}
+
+.visual-top h2 {
+  font-size: 20px;
+}
+
+.operation-grid {
+  gap: 10px;
+}
+
+.operation-card {
+  min-height: 125px;
+  gap: 14px;
+  padding: 17px;
+  border-radius: 16px;
+}
+
+.operation-card-wide {
+  min-height: auto;
+}
+
+.operation-card div strong {
+  font-size: 12px;
+}
+
+.floating-note {
+  right: -18px;
+  bottom: -20px;
+  width: 190px;
+  padding: 15px;
+}
+
+.floating-note p {
+  font-size: 11px;
+}
+
+@media (max-width: 1020px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 60px;
+    padding-bottom: 58px;
+  }
+
+  .hero h1 {
+    font-size: 41px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+}
