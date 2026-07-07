@@ -1330,3 +1330,30 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* Ajuste final de proporciones — Servicios */
+.services-hero {
+  padding-top: 82px;
+  padding-bottom: 76px;
+}
+
+.services-hero h1 {
+  max-width: 850px;
+  font-size: clamp(44px, 5.2vw, 64px);
+  line-height: 1.04;
+}
+
+.services-hero p {
+  max-width: 790px;
+}
+
+.process-layout h2 {
+  max-width: 580px;
+  font-size: clamp(36px, 4.2vw, 50px);
+}
+
+@media (max-width: 640px) {
+  .services-hero h1 {
+    font-size: 39px;
+  }
+}
