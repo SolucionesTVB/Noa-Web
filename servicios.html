@@ -1,91 +1,321 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Servicios | NOA</title>
-  <meta name="description" content="Servicios de NOA: automatización de cobros, asistente virtual, comparador inteligente y control operativo." />
+
+  <meta
+    name="description"
+    content="Soluciones NOA para asesores y corredores de seguros: seguimiento comercial, cobros, cartera e inteligencia aplicada."
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="index.html">
-          <div class="logo" aria-hidden="true"></div>
-          <div class="brandText">
-            <div class="name">NOA</div>
-            <div class="tag">Productividad inteligente para seguros</div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="NOA Inicio">
+        <span class="brand-mark">N</span>
+
+        <span class="brand-copy">
+          <strong>NOA</strong>
+          <small>IA aplicada al negocio de seguros</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a class="active" href="servicios.html">Servicios</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="nosotros.html">Sobre NOA</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <a
+        class="button button-small button-primary"
+        href="https://wa.me/50660457989?text=Hola%2C%20quiero%20conocer%20las%20soluciones%20de%20NOA."
+        target="_blank"
+        rel="noopener"
+      >
+        Conversemos
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="services-hero">
+      <div class="container services-hero-layout">
+        <div>
+          <span class="section-kicker section-kicker-light">
+            Soluciones NOA
+          </span>
+
+          <h1>
+            Herramientas que ordenan la operación y fortalecen el crecimiento.
+          </h1>
+
+          <p>
+            Diseñamos soluciones de inteligencia artificial aplicadas a problemas
+            reales del asesor y del corredor de seguros. Menos tareas manuales,
+            más seguimiento y mayor capacidad para asesorar.
+          </p>
+        </div>
+
+        <div class="services-hero-note">
+          <span>Enfoque NOA</span>
+
+          <strong>
+            No imponemos una plataforma. Construimos la solución alrededor del proceso.
+          </strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Qué resolvemos</span>
+
+            <h2>
+              Soluciones concretas para una operación más ordenada.
+            </h2>
           </div>
-        </a>
-        <nav class="navlinks">
-          <a href="index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <a href="tecnologia.html">Tecnología</a>
-          <a href="nosotros.html">Sobre NOA</a>
-          <a href="contacto.html">Contacto</a>
-        </nav>
-        <div class="actions">
-          <a class="btn primary" href="https://wa.me/50660457989?text=Hola%2C%20quiero%20una%20demo%20de%20NOA." target="_blank" rel="noopener">Pedir demo</a>
+
+          <p>
+            Cada herramienta parte de una necesidad operativa clara. Se adapta al
+            flujo de trabajo y busca generar valor desde el primer uso.
+          </p>
+        </div>
+
+        <div class="service-stack">
+          <article class="service-row">
+            <div class="service-index">01</div>
+
+            <div class="service-main">
+              <span class="service-tag">Gestión comercial</span>
+
+              <h3>Seguimiento de prospectos y oportunidades</h3>
+
+              <p>
+                Centralizamos contactos, próximos pasos, estados y fechas de
+                seguimiento para evitar oportunidades olvidadas y mejorar la disciplina comercial.
+              </p>
+            </div>
+
+            <div class="service-results">
+              <span>Qué mejora</span>
+
+              <ul>
+                <li>Visibilidad de próximos pasos</li>
+                <li>Seguimiento más consistente</li>
+                <li>Mejor control de oportunidades</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-row service-row-accent">
+            <div class="service-index">02</div>
+
+            <div class="service-main">
+              <span class="service-tag">Cobros y cartera</span>
+
+              <h3>Automatización de recordatorios y control de pagos</h3>
+
+              <p>
+                Organizamos vencimientos, recordatorios y estados de pago para
+                reducir trabajo manual, atrasos y desgaste operativo.
+              </p>
+            </div>
+
+            <div class="service-results">
+              <span>Qué mejora</span>
+
+              <ul>
+                <li>Menos seguimiento manual</li>
+                <li>Mayor trazabilidad</li>
+                <li>Mejor control de cartera</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-row">
+            <div class="service-index">03</div>
+
+            <div class="service-main">
+              <span class="service-tag">Atención y soporte</span>
+
+              <h3>Asistentes virtuales para consultas y procesos frecuentes</h3>
+
+              <p>
+                Creamos asistentes que responden, orientan y canalizan solicitudes
+                sin reemplazar la atención humana cuando realmente hace falta.
+              </p>
+            </div>
+
+            <div class="service-results">
+              <span>Qué mejora</span>
+
+              <ul>
+                <li>Respuestas más consistentes</li>
+                <li>Menor saturación operativa</li>
+                <li>Atención más rápida</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-row">
+            <div class="service-index">04</div>
+
+            <div class="service-main">
+              <span class="service-tag">Inteligencia aplicada</span>
+
+              <h3>Información útil para decisiones comerciales y operativas</h3>
+
+              <p>
+                Convertimos datos dispersos en análisis, prioridades y acciones
+                concretas para apoyar decisiones con mayor claridad.
+              </p>
+            </div>
+
+            <div class="service-results">
+              <span>Qué mejora</span>
+
+              <ul>
+                <li>Más claridad para decidir</li>
+                <li>Priorización de oportunidades</li>
+                <li>Mejor lectura de la operación</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <main class="container page">
-    <div class="pageHeader">
-      <h1>Servicios</h1>
-      <p>Lo que vendemos no es "IA por moda". Es ejecución: menos tiempo perdido y más control de operación.</p>
-    </div>
+    <section class="section section-dark">
+      <div class="container process-layout">
+        <div>
+          <span class="section-kicker section-kicker-light">
+            Cómo trabajamos
+          </span>
 
-    <div class="list">
-      <div class="listItem">
-        <b>Automatización de cobros y seguimiento</b>
-        <span>Recordatorios, estados y control de pendientes. Todo claro para el equipo y para dirección.</span>
-      </div>
-      <div class="listItem">
-        <b>Asistente virtual (WhatsApp y web)</b>
-        <span>Respuestas consistentes y canalización de solicitudes sin saturar a tu personal.</span>
-      </div>
-      <div class="listItem">
-        <b>Comparador inteligente (casos/demo)</b>
-        <span>Organiza la info y la presenta de forma entendible para decisiones rápidas y ventas con orden.</span>
-      </div>
-      <div class="listItem">
-        <b>Tablero operativo</b>
-        <span>Visibilidad del trabajo: lo que está abierto, lo que urge y lo que ya se cerró.</span>
-      </div>
-    </div>
+          <h2>
+            Primero entendemos el proceso. Después construimos la herramienta.
+          </h2>
+        </div>
 
-    <div class="card" style="margin-top:14px">
-      <h4>¿Querés que te lo muestre en vivo?</h4>
-      <p>Te hacemos una demo corta y te decimos si aplica o no aplica a tu operación (sin marearte).</p>
-      <div class="pillRow" style="margin-top:12px">
-        <a class="btn primary" href="https://wa.me/50660457989?text=Hola%2C%20quiero%20una%20demo%20de%20NOA." target="_blank" rel="noopener">Agendar por WhatsApp</a>
-        <a class="btn" href="contacto.html">Ver contacto</a>
-      </div>
-    </div>
+        <div class="process-steps">
+          <article>
+            <span>01</span>
+            <strong>Diagnóstico</strong>
+            <p>Revisamos el flujo actual, los pendientes y los puntos de desgaste.</p>
+          </article>
 
-    <footer class="footer">
-      <div class="footerRow">
-        <div>© <span id="y"></span> NOA · Costa Rica</div>
-        <div class="smallLinks">
-          <a href="index.html">Inicio</a>
-          <a href="tecnologia.html">Tecnología</a>
-          <a href="contacto.html">Contacto</a>
+          <article>
+            <span>02</span>
+            <strong>Diseño</strong>
+            <p>Definimos una solución simple, clara y adaptada a la operación.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <strong>Implementación</strong>
+            <p>Construimos, probamos y dejamos la herramienta lista para trabajar.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <strong>Acompañamiento</strong>
+            <p>Medimos el uso y ajustamos para que el valor sea real y sostenible.</p>
+          </article>
         </div>
       </div>
-    </footer>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <span class="section-kicker">Siguiente paso</span>
+
+            <h2>Revisemos qué proceso vale la pena ordenar primero.</h2>
+
+            <p>
+              Una conversación breve es suficiente para identificar si existe una
+              oportunidad real de automatización o mejora.
+            </p>
+          </div>
+
+          <a
+            class="button button-primary button-large"
+            href="https://wa.me/50660457989?text=Hola%2C%20quiero%20revisar%20una%20soluci%C3%B3n%20para%20mi%20operaci%C3%B3n%20de%20seguros."
+            target="_blank"
+            rel="noopener"
+          >
+            Hablar con NOA
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2K3GN2WTT"></script>
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <div>
+        <div class="footer-brand">NOA</div>
+
+        <p>
+          Crecimiento profesional y personal para asesores de seguros.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="nosotros.html">Sobre NOA</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-contact">
+        <span>Costa Rica</span>
+        <a href="https://wa.me/50660457989">+506 6045 7989</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> NOA</span>
+      <span>Inteligencia aplicada al negocio de seguros.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-X2K3GN2WTT"
+  ></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-X2K3GN2WTT');
   </script>
