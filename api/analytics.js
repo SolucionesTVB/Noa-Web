@@ -5,11 +5,9 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'VERCEL_ANALYTICS_TOKEN missing' });
     }
 
-    const teamId = 'team_iwHnv1WqvicjDWpHTitBlmNn';
     const projectId = 'prj_HZ8Zbc6k7veuKwMZpwb3UC5gLfMa';
 
     const url = new URL('https://api.vercel.com/v1/query/web-analytics/visits/count');
-    url.searchParams.set('teamId', teamId);
     url.searchParams.set('projectId', projectId);
 
     const response = await fetch(url, {
