@@ -1,0 +1,58 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "noacr.net" }
+      ],
+      "destination": "https://noacr.co.cr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "www.noacr.co.cr" }
+      ],
+      "destination": "https://noacr.co.cr/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Link", "value": "<https://noacr.co.cr/>; rel=\"canonical\"" }
+      ]
+    },
+    {
+      "source": "/servicios.html",
+      "headers": [
+        { "key": "Link", "value": "<https://noacr.co.cr/servicios.html>; rel=\"canonical\"" }
+      ]
+    },
+    {
+      "source": "/tecnologia.html",
+      "headers": [
+        { "key": "Link", "value": "<https://noacr.co.cr/tecnologia.html>; rel=\"canonical\"" }
+      ]
+    },
+    {
+      "source": "/nosotros.html",
+      "headers": [
+        { "key": "Link", "value": "<https://noacr.co.cr/nosotros.html>; rel=\"canonical\"" }
+      ]
+    },
+    {
+      "source": "/contacto.html",
+      "headers": [
+        { "key": "Link", "value": "<https://noacr.co.cr/contacto.html>; rel=\"canonical\"" }
+      ]
+    }
+  ]
+}
