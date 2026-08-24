@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noacr.co.cr/sitemap.xml
